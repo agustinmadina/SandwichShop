@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sandwich Shop</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="text_view_myorder">My order</string >
+    <string name="radio_button_wheat">Wheat</string>
+    <string name="radio_button_white">White</string>
+    <string name="radio_button_rye">Rye</string>
+    <string name="text_view_bread">Choose your bread  </string>
+    <string name="text_view_topping">Choose your topping</string>
+    <string name="checkbox_specialsauce">Special Sauces</string >
+    <string name="checkbox_bacon">Bacon</string>
+    <string name="checkbox_onion">Onion</string>
+    <string name="button_confirmorder">Confirm Order</string>
+    <string name="text_view_orderconfirmation">Order Confirmation</string>
+    <string name="text_view_breadconfirm">Bread chosen:</string>
+    <string name="text_view_paddings">Toppings chosen:</string>
+
+</resources>
