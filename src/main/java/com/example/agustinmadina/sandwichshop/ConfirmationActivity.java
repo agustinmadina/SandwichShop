@@ -4,22 +4,34 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 /**
  * Created by agustin.madina on 26/01/2015.
  */
 public class ConfirmationActivity extends ActionBarActivity {
-    TextView mTextViewBread;
-    TextView mTextViewPaddings;
+    ArrayList<Sandwich> mOrders;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirmation);
-        mTextViewBread=(TextView)findViewById(R.id.textViewBreadChosen);
-        String Bread=getIntent().getStringExtra("Bread");
-        mTextViewBread.setText(Bread);
-        mTextViewPaddings=(TextView) findViewById(R.id.textViewPaddingsChosen);
-        String Paddings=getIntent().getStringExtra("Special Sauce")+" "+getIntent().getStringExtra("Bacon")+" "+getIntent().getStringExtra("Onion");
-        mTextViewPaddings.setText(Paddings);
+        TextView summaryText = (TextView) findViewById(R.id.text_view_summary);
+        Bundle mBundle=this.getIntent().getExtras();
+        mOrders=mBundle.getParcelableArrayList("orders");
+        String summary = "";
+        int n = 0;
+
+        for (Sandwich s : mOrders){
+            n++;
+            String result = "Sandwich " + Integer.toString(n) + ": ";
+            result += s.getmBread() + " " + (s.getmSpecialSauce()) +""+
+                    s.getmBacon()+"" +
+                    s.getmOnion()+""+"\n";
+            summary += result;
+        }
+
+        summaryText.setText(summary);
     }
 
 }

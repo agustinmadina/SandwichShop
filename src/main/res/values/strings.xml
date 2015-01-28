@@ -17,5 +17,6 @@
     <string name="text_view_orderconfirmation">Order Confirmation</string>
     <string name="text_view_breadconfirm">Bread chosen:</string>
     <string name="text_view_paddings">Toppings chosen:</string>
+    <string name="button_confirmcount">Confirm</string>
 
 </resources>
